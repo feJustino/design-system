@@ -13,6 +13,9 @@ importers:
       '@jax-ui/tokens':
         specifier: '*'
         version: link:../tokens
+      '@jax-ui/ts-config':
+        specifier: '*'
+        version: link:../ts-config
       tsup:
         specifier: ^8.0.2
         version: 8.0.2(typescript@5.4.5)
@@ -22,12 +25,17 @@ importers:
 
   packages/tokens:
     devDependencies:
+      '@jax-ui/ts-config':
+        specifier: '*'
+        version: link:../ts-config
       tsup:
         specifier: ^8.0.2
         version: 8.0.2(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
+
+  packages/ts-config: {}
 
 packages:
 
