@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "dev": "tsup src/index.ts --watch --format cjs,esm --dts"
+    "dev": "tsup src/index.ts --watch --format cjs,esm --dts",
+    "lint": "eslint src/**/*.ts* --fix"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@jax-ui/eslint-config": "*",
     "@jax-ui/ts-config": "*",
     "@jax-ui/tokens": "*",
     "tsup": "^8.0.2",
