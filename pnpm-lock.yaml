@@ -19,9 +19,15 @@ importers:
       '@jax-ui/tokens':
         specifier: '*'
         version: link:../tokens
+      '@jax-ui/ts-config':
+        specifier: '*'
+        version: link:../ts-config
       '@storybook/addon-docs':
         specifier: ^8.0.10
         version: 8.0.10
+      polished:
+        specifier: ^4.3.1
+        version: 4.3.1
       react:
         specifier: ^18.2.0
         version: 18.3.1
