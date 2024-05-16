@@ -1,43 +1,92 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, ElementType } from 'react'
 
 import { styled } from '../styles'
 
 export const Button = styled('button', {
-	fontFamily: '$default',
-	backgroundColor: '$ignite300',
+	all: 'unset',
 	borderRadius: '$sm',
-	padding: '$2 $4',
-	border: 0,
+	fontSize: '$sm',
+	fontFamily: '$default',
+	fontWeight: 'medium',
+	textAlign: 'center',
+
+	minWidth: 120,
+	boxSizing: 'border-box',
+
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
+	gap: '$2',
+
 	cursor: 'pointer',
-	fontWeight: 'bold',
-	color: '$white',
+
+	svg: {
+		width: '$4',
+		height: '$4',
+	},
+
+	'&:disabled': {
+		cursor: 'not-allowed',
+	},
 
 	variants: {
 		size: {
-			small: {
-				fontSize: '14',
+			sm: {
+				padding: '0 $4',
+				height: 38,
 			},
-			big: {
-				fontSize: '16',
-				padding: '$3 $6',
+			md: {
+				padding: '0 $4',
+				height: 46,
 			},
 		},
 		variant: {
 			primary: {
+				color: '$white',
 				backgroundColor: '$ignite500',
+
+				'&:not(:disabled):hover': {
+					backgroundColor: '$ignite300',
+				},
+
+				'&:disabled': {
+					backgroundColor: '$gray200',
+				},
 			},
 			secondary: {
-				backgroundColor: '$ignite300',
+				color: '$ignite300',
+				border: '2px solid $ignite500',
+
+				'&:not(:disabled):hover': {
+					backgroundColor: '$ignite500',
+					color: '$white',
+				},
+
+				'&:disabled': {
+					backgroundColor: '$gray200',
+					color: '$gray200',
+				},
 			},
 			tertiary: {
-				backgroundColor: '$ignite700',
+				color: '$gray100',
+
+				'&:not(:disabled):hover': {
+					color: '$white',
+				},
+
+				'&:disabled': {
+					backgroundColor: '$gray600',
+					color: '$gray200',
+				},
 			},
 		},
 	},
 	defaultVariants: {
-		size: 'small',
+		size: 'md',
 		variant: 'primary',
 	},
 })
 
-export type ButtonProps = ComponentProps<typeof Button>
+export interface ButtonProps extends ComponentProps<typeof Button> {
+	as?: ElementType
+}
