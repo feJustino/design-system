@@ -42,3 +42,7 @@ export const Input = styled('input', {
 		cursor: 'not-allowed',
 	},
 })
+
+TextInputContainer.displayName = 'TextInput.Root'
+Input.displayName = 'TextInput.Input'
+Prefix.displayName = 'TextInput.Prefix'
