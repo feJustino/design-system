@@ -24,12 +24,12 @@ jobs:
           cache: "pnpm"
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm i --frozen-lockfile
 
       - run: pnpm run build
 
       - name: Deploy Storybook
         working-directory: ./packages/docs
-        run: pnpm rum deploy-storybook -- --ci --existing-output-dir=dist
+        run: pnpm run deploy-storybook -- --ci --existing-output-dir=dist
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
