@@ -1,0 +1,28 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  builld-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - run: pnpm ci
+
+      - run: pnpm run build
+
+      - name: Deploy Storybook
+        working-directory: ./packages/docs
+        run: pnpm rum deploy-storybook -- --ci --existing-output-dir=dist
+        env:
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}

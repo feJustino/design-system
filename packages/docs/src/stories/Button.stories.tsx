@@ -9,6 +9,12 @@ const meta: Meta<ButtonProps> = {
 		children: 'Send',
 	},
 	argTypes: {
+		variant: {
+			options: ['primary', 'secondary', 'tertiary'],
+			control: {
+				type: 'inline-radio',
+			},
+		},
 		onClick: { action: 'click' },
 	},
 }
