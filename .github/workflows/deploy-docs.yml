@@ -32,4 +32,4 @@ jobs:
         working-directory: ./packages/docs
         run: pnpm run deploy-storybook -- --ci --existing-output-dir=dist
         env:
-          GH_TOKEN: MyCompany:${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
