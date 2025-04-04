@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-Blucd9Qg.js";import{useMDXComponents as r}from"./index-BRkUXrbv.js";import"./index-Cke6yFr8.js";import{T as e}from"./TokenGrid-CWOSPUxE.js";import{b as i}from"./index-o97nMHRm.js";import{M as m}from"./DocsRenderer-CFRXHY34-D0XmMkBr.js";import"./index-CcKhGcwW.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./preview-BzHJmgnT.js";import"./iframe-ArG791OS.js";import"./index-Bl_qeAUt.js";import"./index-__4L5KGM.js";import"./index-CBft-ReK.js";import"./index-DrFu-skq.js";import"./react-18-CDZ8LzvO.js";function s(o){const n={h1:"h1",p:"p",...r(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{title:"Tokens/Fonts Families"}),`
+`,t.jsx(n.h1,{id:"fonts-families",children:"Fonts Families"}),`
+`,t.jsx(n.p,{children:"Essas são as fontes"}),`
+`,t.jsx(e,{tokens:i,hasRems:!0})]})}function T(o={}){const{wrapper:n}={...r(),...o.components};return n?t.jsx(n,{...o,children:t.jsx(s,{...o})}):s(o)}export{T as default};
