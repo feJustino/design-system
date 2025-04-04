@@ -33,7 +33,7 @@ jobs:
 
       - run: pnpm turbo run build
         env:
-          TURBO_TOKEN: qp5bT782dcK1U8nkJeT4aFBN
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: fejustinos-projects
 
       - name: Build Storybook
