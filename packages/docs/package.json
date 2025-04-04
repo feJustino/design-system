@@ -9,7 +9,6 @@
     "preview": "vite preview",
     "dev": "storybook dev -p 6006",
     "build": "storybook build  --output-dir dist",
-    "build-storybook": "storybook build  --output-dir dist",
     "storybook-deploy": "storybook-to-ghpages"
   },
   "dependencies": {

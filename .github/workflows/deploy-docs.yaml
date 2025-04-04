@@ -31,14 +31,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - run: pnpm turbo run build
+      - name: Build packages
         env:
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: fejustinos-projects
-
-      - name: Build Storybook
-        working-directory: ./packages/docs
-        run: pnpm build-storybook
+        run: pnpm build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
