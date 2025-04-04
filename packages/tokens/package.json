@@ -14,8 +14,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@jax-ui/ts-config": "*",
-    "@jax-ui/eslint-config": "*",
+    "@jax-ui/ts-config": "workspace:*",
+    "@jax-ui/eslint-config": "workspace:*",
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   }
