@@ -10,7 +10,7 @@
     "dev": "storybook dev -p 6006",
     "build": "storybook build  --output-dir dist",
     "build-storybook": "storybook build  --output-dir dist",
-    "storybook-deploy": "storybook-to-ghpages"
+    "storybook-deploy": "storybook-to-ghpages --repo=https://$GH_TOKEN@github.com/feJustino/design-system.git"
   },
   "dependencies": {
     "@jax-ui/eslint-config": "workspace:*",
