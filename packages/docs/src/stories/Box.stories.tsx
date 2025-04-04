@@ -11,6 +11,13 @@ const meta: Meta<BoxProps> = {
 			</>
 		),
 	},
+	argTypes: {
+		children: {
+			options: ['string', 'ReactNode'],
+			type: 'symbol',
+			control: { disable: true },
+		},
+	},
 }
 
 export const Primary: StoryObj<BoxProps> = {}

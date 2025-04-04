@@ -16,6 +16,15 @@ export const WithFallback: StoryObj<AvatarProps> = {
 	args: {
 		src: undefined,
 	},
+	argTypes: {
+		src: {
+			description: 'URL da imagem',
+			type: 'string',
+			control: {
+				type: 'text',
+			},
+		},
+	},
 }
 
 export default meta
