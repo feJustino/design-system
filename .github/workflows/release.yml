@@ -1,17 +1,15 @@
-name: Deploy Storybook
+name: Release
 
 on:
   push:
     branches:
       - main
 
-permissions:
-  contents: write  # Permissão para fazer push no gh-pages
-  pages: write
-  id-token: write
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  build-and-deploy:
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,16 +30,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build packages
-        run: pnpm build
+      - name: Create Release Pull Request
+        uses: changesets/action@v1
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
           TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/docs/dist
-          keep_files: false  # Remove arquivos antigos
-          force_orphan: true  # Mantém apenas o histórico mais recente
