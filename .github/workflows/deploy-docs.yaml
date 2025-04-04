@@ -32,6 +32,9 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - run: pnpm turbo run build
+        env:
+          TURBO_TOKEN: qp5bT782dcK1U8nkJeT4aFBN
+          TURBO_TEAM: fejustinos-projects
 
       - name: Build Storybook
         working-directory: ./packages/docs
