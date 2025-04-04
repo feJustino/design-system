@@ -35,8 +35,8 @@ jobs:
       - name: Build packages
         run: pnpm build
         env:
-          TURBO_TOKEN: qp5bT782dcK1U8nkJeT4aFBN
-          TURBO_TEAM: fejustinos-projects
+          TURBO_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          TURBO_TEAM: ${{ secrets.VERCEL_TEAM }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
