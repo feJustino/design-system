@@ -1,4 +1,4 @@
-name: Deploy Docs
+name: Deploy Storybook
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: write  # Permissão para fazer push no gh-pages
   pages: write
   id-token: write
 
@@ -31,17 +31,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Build
-        run: pnpm build
-
-      - name: Configure Git
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git remote set-url origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-
-      - name: Deploy Storybook
+      - name: Build Storybook
         working-directory: ./packages/docs
-        run: pnpm storybook-deploy -- --ci --existing-output-dir=dist
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Passa o token para o script
+        run: pnpm build-storybook
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./packages/docs/dist
+          keep_files: false  # Remove arquivos antigos
+          force_orphan: true  # Mantém apenas o histórico mais recente
