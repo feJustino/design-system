@@ -34,7 +34,7 @@ jobs:
       - name: Build packages
         run: pnpm build
         env:
-          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TOKEN: qp5bT782dcK1U8nkJeT4aFBN
           TURBO_TEAM: fejustinos-projects
 
       - name: Deploy to GitHub Pages
