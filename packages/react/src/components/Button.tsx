@@ -90,9 +90,35 @@ export const Button = styled('button', {
 		variant: 'primary',
 	},
 })
+export const IconOnly = styled('button', {
+	all: 'unset',
+	borderRadius: '$sm',
+	fontSize: '$sm',
+	fontFamily: '$default',
+	fontWeight: 'medium',
+	textAlign: 'center',
+	width: '$3',
+	height: '$3',
+	margin: '$1',
+	boxSizing: 'border-box',
 
+	display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
+	gap: '$2',
+
+	cursor: 'pointer',
+	color: '$gray500',
+
+	'&:not(:disabled):hover': {
+		color: '$white',
+	},
+
+	'&:disabled': {
+		backgroundColor: '$gray600',
+		color: '$gray200',
+	},
+})
 export interface ButtonProps extends ComponentProps<typeof Button> {
 	as?: ElementType
 }
-
-Button.displayName = 'Button'

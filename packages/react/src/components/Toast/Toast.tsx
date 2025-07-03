@@ -1,7 +1,7 @@
 import { ComponentProps, useEffect, useState } from 'react'
-import { Text } from '../Text'
-import { CloseButton, ToastBubble, ToastContainer } from './styles'
 import { Button } from '../Button'
+import { Text } from '../Text'
+import { ToastBubble } from './styles'
 
 export interface ToastProps extends ComponentProps<typeof ToastBubble> {
 	position?: 'top' | 'bottom'
@@ -31,21 +31,9 @@ export function Toast({
 	if (!visible) return null
 
 	return (
-		<ToastBubble
-			data-toast={true}
-			position={position}
-			{...props}
-			style={{ opacity: 1 }}
-		>
+		<ToastBubble data-toast={true} position={position} {...props}>
 			<Text size={'sm'}>{content}</Text>
-			<CloseButton
-				onClick={() => {
-					setVisible(false)
-					onClose?.()
-				}}
-			>
-				X
-			</CloseButton>
+			<Button.IconOnly>X</Button.IconOnly>
 		</ToastBubble>
 	)
 }
