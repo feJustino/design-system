@@ -1,7 +1,7 @@
 # 🎨 JAX UI Design System
 
 [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://fejustino.github.io/design-system/?path=/docs/home--docs)
-[![CI/CD](https://img.shields.io/github/actions/workflow/status/feJustino/design-system/main.yml?label=CI%2FCD&logo=github)](https://github.com/feJustino/design-system/actions)
+[![CI/CD](https://img.shields.io/github/actions/workflow/status/feJustino/design-system/main.yml?label=CI%2FCD&logo=github)](https://github.com/feJustino/design-system/actions/workflows/deploy-docs.yaml)
 
 Design System React construído com TypeScript, Stitches e Radix UI. Monorepo gerenciado com Turborepo e pnpm.
 
