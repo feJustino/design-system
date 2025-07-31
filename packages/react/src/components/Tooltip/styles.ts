@@ -1,4 +1,10 @@
 import { styled } from '../../styles'
+import { Text } from '../Text'
+
+export const Label = styled(Text, {
+
+})
+
 const InlineFlexBox = {
 	display: 'inline-flex',
 	flexDirection: 'column',

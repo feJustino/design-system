@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
-import { Text } from '../Text'
-import { TooltipBubble, TooltipContainer } from './styles'
+
+import { Label, TooltipBubble, TooltipContainer } from './styles'
 
 export interface TooltipProps extends PropsWithChildren<typeof TooltipBubble> {
 	position?: 'top' | 'bottom'
@@ -10,7 +10,7 @@ export function Tooltip({ children, position, content }: TooltipProps) {
 	return (
 		<TooltipContainer>
 			<TooltipBubble data-tooltip={true} position={position}>
-				<Text size={'sm'}>{content}</Text>
+				<Label size={'sm'}>{content}</Label>
 			</TooltipBubble>
 			{children}
 		</TooltipContainer>
