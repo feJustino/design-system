@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-Blucd9Qg.js";import{useMDXComponents as n}from"./index-BRkUXrbv.js";import"./index-BEQOxW98.js";import{T as r}from"./TokenGrid-CWOSPUxE.js";import{s as m}from"./index-o97nMHRm.js";import{M as i}from"./DocsRenderer-CFRXHY34-CrvdyqDX.js";import"./index-CcKhGcwW.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./preview-DgIY51uq.js";import"./iframe-DjzubfFA.js";import"./index-Bl_qeAUt.js";import"./index-C8ds4P8e.js";import"./index-CBft-ReK.js";import"./index-DrFu-skq.js";import"./react-18-C7duKgMr.js";function e(o){const s={h1:"h1",p:"p",...n(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(i,{title:"Tokens/Spaces"}),`
+`,t.jsx(s.h1,{id:"spaces",children:"Spaces"}),`
+`,t.jsx(s.p,{children:"Essas são os espaçamentos"}),`
+`,t.jsx(r,{tokens:m,hasRems:!0})]})}function X(o={}){const{wrapper:s}={...n(),...o.components};return s?t.jsx(s,{...o,children:t.jsx(e,{...o})}):e(o)}export{X as default};

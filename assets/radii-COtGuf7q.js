@@ -1,0 +1,4 @@
+import{j as t}from"./jsx-runtime-Blucd9Qg.js";import{useMDXComponents as s}from"./index-BRkUXrbv.js";import"./index-BEQOxW98.js";import{T as i}from"./TokenGrid-CWOSPUxE.js";import{r as e}from"./index-o97nMHRm.js";import{M as m}from"./DocsRenderer-CFRXHY34-CrvdyqDX.js";import"./index-CcKhGcwW.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./preview-DgIY51uq.js";import"./iframe-DjzubfFA.js";import"./index-Bl_qeAUt.js";import"./index-C8ds4P8e.js";import"./index-CBft-ReK.js";import"./index-DrFu-skq.js";import"./react-18-C7duKgMr.js";function n(o){const r={h1:"h1",p:"p",...s(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(m,{title:"Tokens/Radius"}),`
+`,t.jsx(r.h1,{id:"radius",children:"Radius"}),`
+`,t.jsx(r.p,{children:"Essas são os espaçamentos"}),`
+`,t.jsx(i,{tokens:e})]})}function T(o={}){const{wrapper:r}={...s(),...o.components};return r?t.jsx(r,{...o,children:t.jsx(n,{...o})}):n(o)}export{T as default};
